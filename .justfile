@@ -2,6 +2,7 @@
 alias c := commit
 
 nodeVersion := `node -v`
+commitMsg := "default adds by justfile"
 
 des:
     #!/usr/bin/env node
@@ -11,5 +12,5 @@ node:
     echo Node Version: {{nodeVersion}}
 commit:
     git add -A
-    git commit -am "adds by justfile"
+    git commit -am "{{commitMsg}}"
     git push
