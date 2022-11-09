@@ -11,5 +11,5 @@ node:
     echo Node Version: {{nodeVersion}}
 commit:
     git add -A
-    git commit -am 'enchce'
+    git commit -am "adds by justfile"
     git push
