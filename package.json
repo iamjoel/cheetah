@@ -1,0 +1,23 @@
+{
+  "name": "cheetah",
+  "version": "1.0.0",
+  "description": "人生苦短。开发速度如猎豹，能有更多的时间来享受人生。",
+  "main": "index.js",
+  "scripts": {
+    "just": "just"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjoel/cheetah.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamjoel/cheetah/issues"
+  },
+  "homepage": "https://github.com/iamjoel/cheetah#readme",
+  "devDependencies": {
+    "just-install": "^1.0.8"
+  }
+}
