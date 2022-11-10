@@ -1,27 +1,22 @@
-# yarn just --list
-
-
-nodeVersion := `node -v`
-msg := "default adds by justfile"
-
+# List available recipes
 default:
-    just --list
+    just -l --unsorted
 
+# Project describe
 des:
     #!/usr/bin/env node
     const des = 'Cheetah runs fast!'
     console.log(des)
-node:
-    echo Node Version: {{nodeVersion}}
+
+# The doc of Using just
+use:
+    cat ./tools/content/developer/just/README.md
 
 # Commit Code
-commit:
+commit msg:
     git add -A
     git commit -am "{{msg}}"
     git push
 
-# Examples: just msg="feat: xxx" c
+# Examples: just "feat: xxx" c
 alias c := commit
-
-s:
-    git status
