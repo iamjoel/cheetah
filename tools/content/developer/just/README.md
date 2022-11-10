@@ -91,3 +91,6 @@ npm i -g just-install
 cd 配方文件
 just 配方名 
 ```
+
+## Demo
+见 [这里](.justfile)
