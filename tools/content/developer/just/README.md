@@ -51,7 +51,24 @@ commit msg:
 
 提交代码只需执行：
 ```
-just '提交信息' commit
+just commit '提交信息'
+```
+
+通过给 just 和 commit 配别名。可以简化为：
+```
+j c '提交信息'
+```
+
+给 just 配别名，用 oh-my-zsh。在 `~/.zshrc` 中加:
+```
+alias j="just"
+```
+
+让其生效，执行 `source ~/.zshrc`。
+
+给 commit 配置别名。在配方中添加：
+```
+alias c := commit
 ```
 
 ## 使用
