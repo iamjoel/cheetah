@@ -1,10 +1,12 @@
-# [just](https://just.systems/man/zh/chapter_1.html)
+# just
 > 为您提供一种保存和运行项目特有命令的便捷方式。
+
+[官网](https://just.systems/man/zh/chapter_1.html)
 
 ## 常见使用场景
 ### 场景1: 快速启动项目
 如果我们有参与多个项目，启动项目比较麻烦。可能是这样的：
-```shell
+```
 cd 项目路径
 nvm use node版本
 npm start
@@ -13,13 +15,13 @@ npm start
 其中，可能还要查询项目路径和 node版本。
 
 用 just，可以简化为：
-```shell
+```
 cd ~
 just 项目名
 ```
 
 执行代码前，要编辑 just 的配方(just 中的运行脚本叫配方)。类似这样：
-```shell
+```
 项目1:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -85,7 +87,7 @@ npm i -g just-install
 参考[这里](https://just.systems/man/zh/chapter_21.html)
 
 4 运行
-```bash
+```
 cd 配方文件
-just [参数] 配方名 
+just 配方名 
 ```
