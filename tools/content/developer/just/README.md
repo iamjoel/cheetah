@@ -61,7 +61,7 @@ just commit '提交信息'
 j c '提交信息'
 ```
 
-给 just 配别名，用 oh-my-zsh。在 `~/.zshrc` 中加:
+给 just 配别名。在 shell 的初始化文件(如 `~/.zshrc`) 加如下内容:
 ```
 alias j="just"
 ```
@@ -91,6 +91,20 @@ npm i -g just-install
 cd 配方文件
 just 配方名 
 ```
+
+## 在任何地方使用
+创建 `~/justfile`
+
+在 shell 的初始化文件(如 `~/.zshrc`) 加如下内容:
+```
+for recipe in `just --justfile ~/justfile --summary`; do
+  alias $recipe="just --justfile ~/justfile --working-directory . $recipe"
+done
+```
+
+让其生效，执行 `source ~/.zshrc`。
+
+之后就可以在任何地方使用了。
 
 ## Demo
 见 [这里](.justfile)
