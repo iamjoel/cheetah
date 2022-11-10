@@ -1,6 +1,15 @@
 default:
     just --list --unsorted
 
+# open url in browser.
+j-open url:
+    # npm package open-cli
+    open-cli {{url}}
+
+# open doc site
+j-doc:
+    open-cli https://iamjoel.github.io/doc/dist/
+
 # Node Project: pet shop
 pet-shop:
     #!/usr/bin/env bash
@@ -22,3 +31,12 @@ pet-shop-site:
     set -euo pipefail
     cd /Users/joel/project/pet-shop-offical
     reload -b
+
+# open url in browser.
+j-open url:
+    # npm package open-cli
+    open-cli {{url}}
+
+# open doc site
+j-doc:
+    open-cli https://iamjoel.github.io/doc/dist/
