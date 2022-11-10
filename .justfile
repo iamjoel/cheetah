@@ -1,8 +1,11 @@
 # yarn just --list
-alias c := commit
+
 
 nodeVersion := `node -v`
-commitMsg := "default adds by justfile"
+msg := "default adds by justfile"
+
+default:
+    just --list
 
 des:
     #!/usr/bin/env node
@@ -11,10 +14,14 @@ des:
 node:
     echo Node Version: {{nodeVersion}}
 
+# Commit Code
 commit:
     git add -A
-    git commit -am "{{commitMsg}}"
+    git commit -am "{{msg}}"
     git push
+
+# Examples: just msg="feat: xxx" c
+alias c := commit
 
 s:
     git status
